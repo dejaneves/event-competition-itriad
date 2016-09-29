@@ -1,0 +1,25 @@
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.centered{
+	float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.text-white{
+    color: white !important;
+}
+
+
+/* Panel */
+.panel hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+    max-width: initial;
+}
