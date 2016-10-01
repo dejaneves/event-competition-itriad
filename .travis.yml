@@ -3,3 +3,8 @@ php:
 - 5.5
 - hhvm
 script: phpunit Test.php
+deploy:
+  provider: heroku
+  api_key:
+    secure: "bb39c61c-f5d5-4259-9137-e471e39333f6"
+  app: event-competition-itriad
