@@ -1,6 +1,8 @@
 # Site Competição iTriad
 Site para compra de ingressos em eventos realizado pela empresa teste de natação.
 
+<a href="https://event-competition-itriad.herokuapp.com"><img width="728" src="https://event-competition-itriad.herokuapp.com/web/img/site-competicao.png" alt="Demo"></a>
+
 ## Site para Venda dos Ingressos
 [Site](https://event-competition-itriad.herokuapp.com)
 
