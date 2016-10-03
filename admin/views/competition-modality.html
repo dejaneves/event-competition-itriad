@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Modalidade Inscritos</h1>
+
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Modalidade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#f5f5f5" ng-repeat-start="modality in modalities.modalidade">
+          <td><strong>{{modality.nome}}</strong></td>
+        </tr>
+        <tr ng-repeat="ins in modality.inscricao">
+          <td> <div style="margin-left:30px;">{{ins.nome}}</div></td>
+        </tr>
+        <tr ng-repeat-end=""></tr>
+        <!-- <tr ng-repeat="modality in modalities.modalidade">
+          <td>{{modality.nome}}</td>
+        </tr> -->
+      </tbody>
+    </table>
+  </div>
+
+</div> <!-- /container -->
