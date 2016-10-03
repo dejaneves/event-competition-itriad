@@ -1,10 +1,11 @@
-app.controller('SubscribeController',function($scope,$http){
+app.controller('SubscribeController',function($scope,$http,$location){
   var urlBase = "/api/v1/";
   $scope.form = {
     modalidades : []
   };
 
   $scope.btnSend = false;
+  $scope.finish = false;
 
   $http({
     method: 'GET',
@@ -13,8 +14,20 @@ app.controller('SubscribeController',function($scope,$http){
     $scope.form.modalidades = response.data;
   });
 
-  $scope.subscribe = function(form){
+  function finishSubscribe(){
+    $scope.finish = true;
+    swal({
+      title: "Inscrição",
+      text: "Sua inscrição foi realizada com Sucesso!",
+      type: "success"
+      },function(isConfirm){
+        if (isConfirm) {
+          location.href="#/";
+        }
+    });
+  }
 
+  $scope.subscribe = function(form){
     var request = {
       method  : 'POST',
       url     : 'participant/create',
@@ -58,7 +71,7 @@ app.controller('SubscribeController',function($scope,$http){
               }
             });
           } else {
-            $scope.form.finish = true;
+            finishSubscribe();
           }
 
         }

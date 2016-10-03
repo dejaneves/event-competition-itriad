@@ -13,15 +13,15 @@
               <div class="col-sm-12 col-lg-9 centered">
                   <div class="panel panel-default">
                       <div class="panel-body">
-                        <form ng-init="form.finish = false">
-                          <div class="alert alert-success" role="alert" ng-show="form.finish">
+                        <form>
+                          <div class="alert alert-success" role="alert" ng-show="finish">
                             <h4>Inscrição Realizada com Successo!</h4>
                             <p>
                               <a href="index.html" class="btn btn-default">Voltar para o site</a>
                               <a href="inscricao.html" class="btn btn-primary">Nova Inscrição</a>
                             </p>
                           </div>
-                          <div ng-hide="form.finish">
+                          <div ng-hide="finish">
                             <div class="form-group">
                               <label for="nome">Nome</label>
                               <input type="text" ng-model="form.nome" class="form-control" placeholder="Primeiro Nome">
