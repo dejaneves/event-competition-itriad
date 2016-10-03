@@ -1,0 +1,79 @@
+<section id="services">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <h2 class="section-heading">Inscrição</h2>
+                  <hr class="primary">
+              </div>
+          </div>
+      </div>
+      <div class="container">
+          <div class="row">
+
+              <div class="col-sm-12 col-lg-9 centered">
+                  <div class="panel panel-default">
+                      <div class="panel-body">
+                        <form ng-init="form.finish = false">
+                          <div class="alert alert-success" role="alert" ng-show="form.finish">
+                            <h4>Inscrição Realizada com Successo!</h4>
+                            <p>
+                              <a href="index.html" class="btn btn-default">Voltar para o site</a>
+                              <a href="inscricao.html" class="btn btn-primary">Nova Inscrição</a>
+                            </p>
+                          </div>
+                          <div ng-hide="form.finish">
+                            <div class="form-group">
+                              <label for="nome">Nome</label>
+                              <input type="text" ng-model="form.nome" class="form-control" placeholder="Primeiro Nome">
+                            </div>
+                            <div class="form-group">
+                              <label for="sobrenome">Sobrenome</label>
+                              <input type="text" ng-model="form.sobrenome" name="sobrenome" class="form-control" placeholder="Sobrenome">
+                            </div>
+                            <div class="form-group">
+                              <label for="email">E-mail</label>
+                              <input type="email" ng-model="form.email" class="form-control" placeholder="E-mail">
+                            </div>
+                            <h3>Modalidades</h3>
+                            <div class="checkbox" ng-repeat="modalidade in form.modalidades">
+                              <label>
+                                <input type="checkbox" ng-model="form.modalidade[$index]" value="{{modalidade.competicao_has_modalidade_id}}">
+                                {{modalidade.nome}}
+                              </label>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                              <label for="modalidade">Já Participou de eventos anteriores ? </label>
+                              <div class="radio">
+                                  <label>
+                                      <input type="radio" ng-model="form.participou_anterior" value="sim" checked>
+                                      Sim
+                                  </label>
+                              </div>
+                              <div class="radio">
+                                  <label>
+                                      <input type="radio" ng-model="form.participou_anterior" value="nao">
+                                      Não
+                                  </label>
+                              </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <a href="index.html" class="btn btn-primary pull-left">Voltar</a>
+                                </div>
+                                <div class="col-sm-6">
+                                    <button type="button" class="btn btn-success pull-right btn-subscribe" ng-disabled="btnSend" ng-click="subscribe(form)">Finalizar Inscrição</button>
+                                </div>
+                            </div>
+                          </div>
+
+
+                        </form>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+  </section>

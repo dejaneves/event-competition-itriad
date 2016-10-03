@@ -17,6 +17,13 @@ $app->group('/participant', function () {
         header("Content-Type: application/json");
         echo json_encode($result);
     });
+    $this->post('/modality', function (Request $request, Response $response) {
+        $data = $request->getParsedBody();
+        $registration = new Registration;
+        $registration->subscribeModality($data);
+        header("Content-Type: application/json");
+        echo json_encode($registration->rowCountSubscribeModality);
+    });
 });
 
 // Login
@@ -35,13 +42,21 @@ $app->get('/competition/active', function ($request, $response, $args) {
     header("Content-Type: application/json");
     echo json_encode($competition->result);
 });
-
+// Competition by id
 $app->get('/competition/id/{id}', function ($request, $response, $args) {
     $competition = new Competition;
     $competition->fetchId($args['id']);
     header("Content-Type: application/json");
     echo json_encode($competition->result);
 });
+
+$app->get('/modality/all', function ($request, $response, $args) {
+    $modality = new Modality;
+    $modality->modalityCompetition();
+    header("Content-Type: application/json");
+    echo json_encode($modality->result);
+});
+
 
 // Check Session Server
 $app->get('/session', function () {

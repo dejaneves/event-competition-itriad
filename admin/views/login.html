@@ -42,16 +42,16 @@ body {
 </style>
 <div class="container" ng-controller="LoginController">
     <form class="form-signin">
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" ng-model="form.email" class="form-control" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" ng-model="form.password" class="form-control" placeholder="Password" required>
+        <h2 class="form-signin-heading">Realizar Login</h2>
+        <label for="inputEmail" class="sr-only">E-mail</label>
+        <input type="email" ng-model="form.email" class="form-control" placeholder="Informe seu e-mail" required autofocus>
+        <label for="inputPassword" class="sr-only">Senha</label>
+        <input type="password" ng-model="form.password" class="form-control" placeholder="Informe sua senha" required>
         <div class="checkbox">
             <label>
-                <input type="checkbox" value="remember-me"> Remember me
+                <input type="checkbox" value="remember-me"> Lembrar-me
             </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block btn-login" ng-click="login(form)" type="button">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block btn-login" ng-click="login(form)" type="button">Entrar</button>
     </form>
 </div>

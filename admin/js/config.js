@@ -19,7 +19,7 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRo
         templateUrl: 'views/competition-modality.html',
         controller:'CompatitionModalityController'
     });
-    //$urlRouterProvider.otherwise('');
+    
 }]).run(function($rootScope, $state, $location,$http){
 
     $http({
@@ -41,6 +41,4 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRo
         }
     });
 
-
-
-});;
+});
