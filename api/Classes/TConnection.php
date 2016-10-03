@@ -4,13 +4,12 @@ final class TConnection{
   private function __construct() {}
 
   public static function open(){
-    $host   = "localhost";
-    $user   = "root";
-    $port   = "3306";
-    $pass   = "qdert#2653@";
-    $dbname = "triad";
+    $host   = "mysql.empregosmanaus.com.br";
+    $user   = "empregosmanaus01";
+    $pass   = "gf30n43ta405webvty";
+    $dbname = "empregosmanaus01";
 
-    $conn = new PDO("mysql:host={$host};dbname={$dbname};port={$port}", $user, $pass, array(
+    $conn = new PDO("mysql:host={$host};dbname={$dbname}", $user, $pass, array(
       PDO::ATTR_PERSISTENT => true,
       PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
     ));
