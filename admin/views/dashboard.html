@@ -1,0 +1,86 @@
+<div class="container">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-xs-12 - col-sm-6">
+        <h6 class="text-info text-left">Competição em Andamento</h6>
+      </div>
+      <div class="col-xs-12 - col-sm-6">
+        <h5 class="text-info text-right">Dias Restantes: <strong>35</strong></h5>
+      </div>
+    </div>
+    <h1 ng-bind="competition.nome"></h1>
+    <p>{{competition.titulo}}, {{competition.data}}. {{competition.descricao}}</p>
+    <p>Local: {{competition.local}}</p>
+    <p>
+      <a class="btn btn-lg btn-primary" href="#/page/competition/{{competition.competicao_id}}" role="button">Visualizar inscritos &raquo;</a>
+    </p>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 col-lg-3">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <div class="row">
+                <div class="col-xs-3">
+                  <i class="fa fa-ticket fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                  <div class="huge">50</div>
+                  <div class="text-uppercase">Total Inscritos</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-3 col-lg-3">
+          <div class="panel panel-green">
+            <div class="panel-heading">
+              <div class="row">
+                <div class="col-xs-3">
+                  <i class="fa fa-money fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                  <div class="huge">12</div>
+                  <div class="text-uppercase">Total Pagos</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-3 col-lg-3">
+          <div class="panel panel-yellow">
+            <div class="panel-heading">
+              <div class="row">
+                <div class="col-xs-3">
+                  <i class="fa fa-users fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                  <div class="huge">26</div>
+                  <div class="text-uppercase">QTD Modalidades</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-lg-3">
+          <div class="panel panel-red">
+            <div class="panel-heading">
+              <div class="row">
+                <div class="col-xs-3">
+                  <i class="fa fa-support fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                  <div class="huge">26</div>
+                  <div class="text-uppercase">Pendentes</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- /container -->

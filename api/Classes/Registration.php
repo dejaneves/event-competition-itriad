@@ -25,8 +25,8 @@ class Registration{
 
             TTransaction::close();
         } catch (Exception $e) {
-            return $e;
             TTransaction::rollback();
+            return $e;
         }
     }
 
